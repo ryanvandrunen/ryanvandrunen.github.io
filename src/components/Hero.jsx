@@ -12,7 +12,7 @@ const Hero = () => {
         <img
           src={herobg}
           alt="hero bg"
-          className="w-full h-full sm:block hidden object-cover"
+          className="w-full h-full sm:block object-cover"
         />
       </div>
       <section
