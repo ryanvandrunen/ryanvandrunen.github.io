@@ -21,7 +21,7 @@ const Navbar = () => {
             window.scrollTo(0, 0);
           }}>
 
-          <p class='text-black text-[21px] font-bold cursor-pointer flex '>Ryan Van Drunen | Portfolio</p>
+          <p class='text-black sm:text-[21px] text-[15px] font-bold cursor-pointer flex '>Ryan Van Drunen | Portfolio</p>
         </Link>
         <ul className="list-none hidden sm:flex flex-row gap-10 mt-2">
           {navLinks.map((nav) => (
@@ -55,14 +55,14 @@ const Navbar = () => {
               </div>
               <ul
                 className="list-none flex flex-col -gap-[1rem] 
-                items-start justify-end mt-[8rem] -ml-[30px]">
+                items-start justify-end mt-[8rem] -ml-[25px]">
                 {navLinks.map((nav) => (
                   <li
                     id={nav.id + ' '}
                     key={nav.id}
                     className={`${
                       active === nav.title ? 'text-french' : 'text-eerieBlack'
-                    } text-[58px] font-bold
+                    } text-[40px] font-bold
                       uppercase tracking-[1px] cursor-pointer`}
                     onClick={() => {
                       setToggle(!toggle);

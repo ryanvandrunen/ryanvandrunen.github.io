@@ -59,7 +59,7 @@ const Hero = () => {
         </div>
 
         <div
-          className="absolute xs:bottom-10 bottom-32 w-full 
+          className="absolute bottom-10 w-full 
           flex justify-center items-center">
           <a href="#tech">
             <div
