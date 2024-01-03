@@ -6,5 +6,8 @@ export default defineConfig({
   plugins: [react()],
   esbuild: {
     loader: 'jsx'
+  },
+  build: {
+    chunkSizeWarningLimit: 1600,
   }
 })
