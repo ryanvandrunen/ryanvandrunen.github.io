@@ -11,9 +11,6 @@ import { download, downloadHover, resume } from '../assets';
 import { textVariant } from '../utils/motion';
 
 const ExperienceCard = ({ experience }) => (
-
-
-
   <VerticalTimelineElement
     contentStyle={{
       background: '#eaeaec',
@@ -55,14 +52,18 @@ const ExperienceCard = ({ experience }) => (
 );
 
 const onButtonClick = () => {
-  const pdfUrl = "src/assets/Ryan_Van_Drunen_Resume_Jan_10.pdf";
-  const link = document.createElement('a');
-  link.href = pdfUrl;
-  link.download = "RyanVanDrunen_Resume.pdf";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
+  fetch("src/assets/Ryan_Van_Drunen_Resume_Jan_10.pdf").then((response) => {
+    response.blob().then((blob) => {
+      const fileUrl = window.URL.createObjectURL(blob);
+
+      let alink = document.createElement("a");
+      alink.href=fileUrl;
+      alink.download="RyanVanDrunen_Resume.pdf";
+      alink.click();
+    })
+  }) 
 };
+
 const Experience = () => {
   return (
     <>
