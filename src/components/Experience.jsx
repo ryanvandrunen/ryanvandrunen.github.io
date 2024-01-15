@@ -52,7 +52,7 @@ const ExperienceCard = ({ experience }) => (
 );
 
 const onButtonClick = () => {
-  fetch("src/assets/Ryan_Van_Drunen_Resume_Jan_10.pdf").then((response) => {
+  fetch("../src/assets/Ryan_Van_Drunen_Resume_Jan_10.pdf").then((response) => {
     response.blob().then((blob) => {
       const fileUrl = window.URL.createObjectURL(blob);
 
