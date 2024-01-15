@@ -10,6 +10,18 @@ import { SectionWrapper } from '../hoc';
 import { download, downloadHover, resume } from '../assets';
 import { textVariant } from '../utils/motion';
 
+const PDF_FILE_URL = 'src/assets/Ryan_Van_Drunen_Resume_Jan_10.pdf';
+const FILE_NAME = 'RyanVanDrunen_Resume.pdf';
+
+const downloadFileAtURL = (url) => {
+  const aTag = document.createElement('a');
+  aTag.href=url;
+  aTag.setAttribute('download', FILE_NAME);
+  document.body.appendChild(aTag);
+  aTag.click();
+  aTag.remove();
+}
+
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
     contentStyle={{
@@ -50,19 +62,6 @@ const ExperienceCard = ({ experience }) => (
     </div>
   </VerticalTimelineElement>
 );
-
-const onButtonClick = () => {
-  fetch("../src/assets/Ryan_Van_Drunen_Resume_Jan_10.pdf").then((response) => {
-    response.blob().then((blob) => {
-      const fileUrl = window.URL.createObjectURL(blob);
-
-      let alink = document.createElement("a");
-      alink.href=fileUrl;
-      alink.download="RyanVanDrunen_Resume.pdf";
-      alink.click();
-    })
-  }) 
-};
 
 const Experience = () => {
   return (
@@ -113,7 +112,9 @@ const Experience = () => {
               sm:mt-[22px] mt-[16px] hover:bg-battleGray 
               hover:text-eerieBlack transition duration-[0.2s] 
               ease-in-out"
-              onClick = {onButtonClick}
+              onClick = {
+                downloadFileAtURL(PDF_FILE_URL)
+              }
               onMouseOver={() => {
                 document
                   .querySelector('.download-btn')
