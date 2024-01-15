@@ -10,18 +10,6 @@ import { SectionWrapper } from '../hoc';
 import { download, downloadHover, resume } from '../assets';
 import { textVariant } from '../utils/motion';
 
-import axios from 'axios'
-import fileDownload from 'js-file-download'
-
-handleDownload = (url, fileName) => {
-  axios.get(url, {
-    responseType: 'blob'
-  })
-  .then((res) => {
-    fileDownload(res.data, fileName)
-  })
-}
-
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
     contentStyle={{
@@ -112,7 +100,7 @@ const Experience = () => {
               sm:mt-[22px] mt-[16px] hover:bg-battleGray 
               hover:text-eerieBlack transition duration-[0.2s] 
               ease-in-out"
-              onClick={() => {handleDownload('https://ryanvandrunen.github.io/Ryan_Van_Drunen_Resume_Jan_10.pdf', 'RyanVanDrunen_Resume.pdf')}}
+              onClick={() => window.open('src/assets/Ryan_Van_Drunen_Resume_Jan_10.pdf', '_blank')}
               onMouseOver={() => {
                 document
                   .querySelector('.download-btn')
