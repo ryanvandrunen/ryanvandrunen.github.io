@@ -10,7 +10,7 @@ import { SectionWrapper } from '../hoc';
 import { download, downloadHover, resume } from '../assets';
 import { textVariant } from '../utils/motion';
 
-const PDF_FILE_URL = 'src/assets/Ryan_Van_Drunen_Resume_Jan_10.pdf';
+const PDF_FILE_URL = 'https://ryanvandrunen.github.io/Ryan_Van_Drunen_Resume_Jan_10.pdf';
 const FILE_NAME = 'RyanVanDrunen_Resume.pdf';
 
 const downloadFileAtURL = (url) => {
