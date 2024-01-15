@@ -11,6 +11,9 @@ import { download, downloadHover, resume } from '../assets';
 import { textVariant } from '../utils/motion';
 
 const ExperienceCard = ({ experience }) => (
+
+
+
   <VerticalTimelineElement
     contentStyle={{
       background: '#eaeaec',
@@ -51,6 +54,15 @@ const ExperienceCard = ({ experience }) => (
   </VerticalTimelineElement>
 );
 
+const onButtonClick = () => {
+  const pdfUrl = "src/assets/Ryan_Van_Drunen_Resume_Jan_10.pdf";
+  const link = document.createElement('a');
+  link.href = pdfUrl;
+  link.download = "RyanVanDrunen_Resume.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+};
 const Experience = () => {
   return (
     <>
@@ -100,7 +112,7 @@ const Experience = () => {
               sm:mt-[22px] mt-[16px] hover:bg-battleGray 
               hover:text-eerieBlack transition duration-[0.2s] 
               ease-in-out"
-              onClick={() => window.open('src/assets/Ryan_Van_Drunen_Resume_Jan_10.pdf', '_blank')}
+              onClick = {onButtonClick}
               onMouseOver={() => {
                 document
                   .querySelector('.download-btn')
