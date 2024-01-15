@@ -112,7 +112,7 @@ const Experience = () => {
               sm:mt-[22px] mt-[16px] hover:bg-battleGray 
               hover:text-eerieBlack transition duration-[0.2s] 
               ease-in-out"
-              onClick={() => {this.handleDownload('https://ryanvandrunen.github.io/Ryan_Van_Drunen_Resume_Jan_10.pdf', 'RyanVanDrunen_Resume.pdf')}}
+              onClick={() => {handleDownload('https://ryanvandrunen.github.io/Ryan_Van_Drunen_Resume_Jan_10.pdf', 'RyanVanDrunen_Resume.pdf')}}
               onMouseOver={() => {
                 document
                   .querySelector('.download-btn')
