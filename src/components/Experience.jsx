@@ -10,6 +10,11 @@ import { SectionWrapper } from '../hoc';
 import { download, downloadHover, resume } from '../assets';
 import { textVariant } from '../utils/motion';
 
+const link = document.createElement('a'); 
+link.href = 'src/assets/Ryan_Van_Drunen_Resume_Jan_10.pdf';
+link.target = "_blank";
+link.download = 'Ryan_Van_Drunen_Resume_Jan_10.pdf';
+
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
     contentStyle={{
@@ -101,10 +106,7 @@ const Experience = () => {
               hover:text-eerieBlack transition duration-[0.2s] 
               ease-in-out"
               onClick={() =>
-                window.open(
-                  'src/assets/Ryan_Van_Drunen_Resume_Jan_10.pdf', //paste the link to your resume here
-                  '_blank'
-                )
+                link.click()
               }
               onMouseOver={() => {
                 document
