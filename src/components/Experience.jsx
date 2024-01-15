@@ -10,10 +10,12 @@ import { SectionWrapper } from '../hoc';
 import { download, downloadHover, resume } from '../assets';
 import { textVariant } from '../utils/motion';
 
-const link = document.createElement('a'); 
-link.href = "src/assets/Ryan_Van_Drunen_Resume_Jan_10.pdf";
-link.target = "_blank";
-link.download = 'Ryan_Van_Drunen_Resume_Jan_10.pdf';
+const RESUME = "src/assets/Ryan_Van_Drunen_Resume_Jan_10.pdf";
+
+// const link = document.createElement('a'); 
+// link.href = "src/assets/Ryan_Van_Drunen_Resume_Jan_10.pdf";
+// link.target = "_blank";
+// link.download = 'Ryan_Van_Drunen_Resume_Jan_10.pdf';
 
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
@@ -96,7 +98,7 @@ const Experience = () => {
                 />
               </div>
             }>
-            <button
+            <a
               className="live-demo flex justify-between 
               sm:text-[18px] text-[14px] text-timberWolf 
               font-bold font-beckman items-center py-5 pl-3 pr-3 
@@ -105,9 +107,9 @@ const Experience = () => {
               sm:mt-[22px] mt-[16px] hover:bg-battleGray 
               hover:text-eerieBlack transition duration-[0.2s] 
               ease-in-out"
-              onClick={() =>
-                link.click()
-              }
+              href={RESUME}
+              target="_blank"
+              rel = "noopener noreferrer"
               onMouseOver={() => {
                 document
                   .querySelector('.download-btn')
@@ -125,7 +127,7 @@ const Experience = () => {
                 className="download-btn sm:w-[26px] sm:h-[26px] 
                 w-[23px] h-[23px] object-contain"
               />
-            </button>
+            </a>
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>
