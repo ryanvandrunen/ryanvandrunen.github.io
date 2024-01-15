@@ -10,12 +10,17 @@ import { SectionWrapper } from '../hoc';
 import { download, downloadHover, resume } from '../assets';
 import { textVariant } from '../utils/motion';
 
-const RESUME = "src/assets/Ryan_Van_Drunen_Resume_Jan_10.pdf";
+import axios from 'axios'
+import fileDownload from 'js-file-download'
 
-// const link = document.createElement('a'); 
-// link.href = "src/assets/Ryan_Van_Drunen_Resume_Jan_10.pdf";
-// link.target = "_blank";
-// link.download = 'Ryan_Van_Drunen_Resume_Jan_10.pdf';
+handleDownload = (url, fileName) => {
+  axios.get(url, {
+    responseType: 'blob'
+  })
+  .then((res) => {
+    fileDownload(res.data, fileName)
+  })
+}
 
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
@@ -98,7 +103,7 @@ const Experience = () => {
                 />
               </div>
             }>
-            <a
+            <button
               className="live-demo flex justify-between 
               sm:text-[18px] text-[14px] text-timberWolf 
               font-bold font-beckman items-center py-5 pl-3 pr-3 
@@ -107,9 +112,7 @@ const Experience = () => {
               sm:mt-[22px] mt-[16px] hover:bg-battleGray 
               hover:text-eerieBlack transition duration-[0.2s] 
               ease-in-out"
-              href={RESUME}
-              target="_blank"
-              rel = "noopener noreferrer"
+              onClick={() => {this.handleDownload('https://ryanvandrunen.github.io/Ryan_Van_Drunen_Resume_Jan_10.pdf', 'RyanVanDrunen_Resume.pdf')}}
               onMouseOver={() => {
                 document
                   .querySelector('.download-btn')
@@ -127,7 +130,7 @@ const Experience = () => {
                 className="download-btn sm:w-[26px] sm:h-[26px] 
                 w-[23px] h-[23px] object-contain"
               />
-            </a>
+            </button>
           </VerticalTimelineElement>
         </VerticalTimeline>
       </div>
