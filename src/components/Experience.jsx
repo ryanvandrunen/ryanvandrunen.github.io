@@ -10,7 +10,7 @@ import { SectionWrapper } from '../hoc';
 import { download, downloadHover, resume } from '../assets';
 import { textVariant } from '../utils/motion';
 
-const PDF_FILE_URL = 'https://ryanvandrunen.github.io/Ryan_Van_Drunen_Resume_Jan_10.pdf';
+const PDF_FILE_URL = 'http://ryanvandrunen.github.io/Ryan_Van_Drunen_Resume_Jan_10.pdf';
 const FILE_NAME = 'RyanVanDrunen_Resume.pdf';
 
 const downloadFileAtURL = (url) => {
@@ -112,9 +112,9 @@ const Experience = () => {
               sm:mt-[22px] mt-[16px] hover:bg-battleGray 
               hover:text-eerieBlack transition duration-[0.2s] 
               ease-in-out"
-              onClick = {
+              onClick = {()=>{
                 downloadFileAtURL(PDF_FILE_URL)
-              }
+              }}
               onMouseOver={() => {
                 document
                   .querySelector('.download-btn')
