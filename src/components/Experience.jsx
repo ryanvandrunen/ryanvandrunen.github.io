@@ -10,18 +10,6 @@ import { SectionWrapper } from '../hoc';
 import { download, downloadHover, resume } from '../assets';
 import { textVariant } from '../utils/motion';
 
-const PDF_FILE_URL = window.location.origin + "src\assets\Ryan_Van_Drunen_Resume_Jan_10.pdf";
-const FILE_NAME = 'RyanVanDrunen_Resume.pdf';
-
-const downloadFileAtURL = (url) => {
-  const aTag = document.createElement('a');
-  aTag.href=url;
-  aTag.setAttribute('download', FILE_NAME);
-  document.body.appendChild(aTag);
-  aTag.click();
-  aTag.remove();
-}
-
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
     contentStyle={{
@@ -112,8 +100,13 @@ const Experience = () => {
               sm:mt-[22px] mt-[16px] hover:bg-battleGray 
               hover:text-eerieBlack transition duration-[0.2s] 
               ease-in-out"
-              onClick = {()=>{
-                downloadFileAtURL(PDF_FILE_URL)
+              onClick = {() => {
+                const link = document.createElement('a');
+                link.href = window.location.origin + "/src/assets/Ryan_Van_Drunen_Resume_Jan_10.pdf";
+                link.target = "_blank";
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
               }}
               onMouseOver={() => {
                 document
@@ -124,7 +117,10 @@ const Experience = () => {
                 document
                   .querySelector('.download-btn')
                   .setAttribute('src', download);
-              }}>
+              }}
+              >
+              <a href="ryanvandrunen.github.io/src/assets/Ryan_Van_Drunen_Resume_Jan_10.pdf"
+              target="_blank"></a>
               MY RESUME
               <img
                 src={download}
