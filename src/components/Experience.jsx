@@ -102,7 +102,7 @@ const Experience = () => {
               ease-in-out"
               onClick = {() => {
                 const link = document.createElement('a');
-                link.href = window.location.origin + "/Ryan_Van_Drunen_Resume_Jan_10.pdf";
+                link.href = "https://ryanvandrunen.github.io/resume.pdf";
                 link.target = "_blank";
                 document.body.appendChild(link);
                 link.click();
