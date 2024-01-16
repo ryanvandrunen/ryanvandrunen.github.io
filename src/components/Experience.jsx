@@ -9,6 +9,7 @@ import { experiences } from '../constants';
 import { SectionWrapper } from '../hoc';
 import { download, downloadHover, resume } from '../assets';
 import { textVariant } from '../utils/motion';
+import resumePDF from '../../resume.pdf';
 
 const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
@@ -102,7 +103,7 @@ const Experience = () => {
               ease-in-out"
               onClick = {() => {
                 const link = document.createElement('a');
-                link.href = process.env.PUBLIC_URL + "/resume.pdf";
+                link.href = resumePDF;
                 link.target = "_blank";
                 document.body.appendChild(link);
                 link.click();
