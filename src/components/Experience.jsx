@@ -102,7 +102,7 @@ const Experience = () => {
               ease-in-out"
               onClick = {() => {
                 const link = document.createElement('a');
-                link.href = "https://ryanvandrunen.github.io/resume.pdf";
+                link.href = process.env.PUBLIC_URL + "/resume.pdf";
                 link.target = "_blank";
                 document.body.appendChild(link);
                 link.click();
