@@ -102,7 +102,7 @@ const Experience = () => {
               ease-in-out"
               onClick = {() => {
                 const link = document.createElement('a');
-                link.href = window.location.origin + "/src/assets/Ryan_Van_Drunen_Resume_Jan_10.pdf";
+                link.href = window.location.origin + "/Ryan_Van_Drunen_Resume_Jan_10.pdf";
                 link.target = "_blank";
                 document.body.appendChild(link);
                 link.click();
@@ -119,8 +119,6 @@ const Experience = () => {
                   .setAttribute('src', download);
               }}
               >
-              <a href="ryanvandrunen.github.io/src/assets/Ryan_Van_Drunen_Resume_Jan_10.pdf"
-              target="_blank"></a>
               MY RESUME
               <img
                 src={download}
