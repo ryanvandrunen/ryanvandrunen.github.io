@@ -104,6 +104,7 @@ const Experience = () => {
               onClick = {() => {
                 const link = document.createElement('a');
                 link.href = resumePDF;
+                link.download = "RyanVanDrunen_Resume.pdf";
                 link.target = "_blank";
                 document.body.appendChild(link);
                 link.click();
