@@ -14,7 +14,9 @@ import {
   threejs,
   vue,
   bootstrap,
-  tc
+  tc,
+  remnant,
+  qweb
 } from '../assets';
 
 export const navLinks = [
@@ -89,11 +91,18 @@ const technologies = [
 
 const experiences = [
   {
+    title: 'Team Lead',
+    company_name: 'Queen\'s Web Development Club',
+    icon: qweb,
+    iconBg: '#333333',
+    date: 'Jan 2024 - Present'
+  },
+  {
     title: 'Produce Clerk',
     company_name: 'Metro Inc',
     icon: metro,
     iconBg: '#333333',
-    date: 'July 2022 - Current',
+    date: 'July 2022 - Dec 2023',
   },
   {
     title: 'Software Developer CO-OP',
@@ -129,6 +138,17 @@ const projects = [
     image: unwordle,
     repo: 'https://github.com/ryanvandrunen/Unwordle-SAT-Solver'
   },
+  {
+    id: 'project-2',
+    name: 'Remnant Studios',
+    description: 'Created and deployed a website for a friend\'s independent project, using HTML/CSS, JavaScript, and slick for a responsive image carousel.',
+    tags: [
+      
+    ],
+    image: remnant,
+    repo: 'https://github.com/jctjad/jctjad.github.io',
+    demo: 'https://www.remnant-studios.com'
+  }
 ];
 
 export { technologies, experiences, projects };

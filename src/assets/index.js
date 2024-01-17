@@ -27,8 +27,12 @@ import bootstrap from './tech/bootstrap.png'
 import metro from './company/metro.png';
 import tc from './company/tc.png';
 import kp9 from './company/kp9.png'
+import qweb from './company/qweb.png';
 
 import unwordle from './projects/unwordle.png';
+import remnant from './projects/remnant.png';
+
+import rvdlogo from './logo/rvd logo.png';
 
 export {
   nairobi,
@@ -57,5 +61,8 @@ export {
   bootstrap,
   kp9,
   metro,
-  tc
+  tc,
+  remnant,
+  rvdlogo,
+  qweb
 };

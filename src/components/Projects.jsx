@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { SectionWrapper } from '../hoc';
 import { styles } from '../styles';
-import { github } from '../assets';
+import { github, rvdlogo } from '../assets';
 import { projects } from '../constants';
 import { fadeIn, textVariant, staggerContainer } from '../utils/motion';
 
@@ -12,6 +12,7 @@ const ProjectCard = ({
   description,
   image,
   repo,
+  demo,
   index,
   active,
   handleClick,
@@ -74,7 +75,19 @@ const ProjectCard = ({
               font-poppins tracking-[1px]">
               {description}
             </p>
-            
+            {demo != null && 
+            <button
+              className="live-demo sm:text-[17px] text-[15px] 
+              text-timberWolf font-bold font-beckman items-center
+              whitespace-nowrap gap-1 sm:w-[138px] sm:h-[50px] 
+              w-[125px] h-[46px] rounded-[10px] glassmorphism 
+              sm:mt-[22px] mt-[16px] hover:bg-battleGray 
+              hover:text-eerieBlack transition duration-[0.2s] 
+              ease-in-out"
+              onClick={() => window.open(demo, '_blank')}>
+              LIVE DEMO
+            </button>
+            }
           </div>
         </>
       )}
