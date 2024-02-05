@@ -39,10 +39,11 @@ const Tech = () => {
           <h3 class="text-white text-[20px] font-bold text-center">Tools and Technologies</h3>
           <div class="flex flex-wrap justify-center gap-2 mt-2 text-center">
             <p class="text-white green-text-gradient ">VSCode</p>
-            <p class="text-white green-text-gradient ">Visual Studios</p>
-            <p class="text-white green-text-gradient ">GitHub</p>
+            <p class="text-white green-text-gradient ">Github</p>
             <p class="text-white green-text-gradient ">KNIME</p>
             <p class="text-white green-text-gradient ">LaTeX</p>
+            <p class="text-white green-text-gradient">Firebase</p>
+            <p class="text-white green-text-gradient">Docker</p>
           </div>
         </div>
       </div>
