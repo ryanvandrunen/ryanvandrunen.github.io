@@ -91,18 +91,25 @@ const technologies = [
 
 const experiences = [
   {
+    title: 'Engineering & Maintenance Summer Student', 
+    company_name: 'TC Transcontinental',
+    icon: tc,
+    iconBg: '#333333',
+    date: 'May 2024 - Aug 2024'
+  },
+  {
     title: 'Team Lead',
     company_name: 'Queen\'s Web Development Club',
     icon: qweb,
     iconBg: '#333333',
-    date: 'Jan 2024 - Present'
+    date: 'Jan 2024 - April 2024'
   },
   {
     title: 'Produce Clerk',
     company_name: 'Metro Inc',
     icon: metro,
     iconBg: '#333333',
-    date: 'July 2022 - Dec 2023',
+    date: 'July 2022 - Aug 2024',
   },
   {
     title: 'Software Developer CO-OP',
