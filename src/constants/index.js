@@ -4,19 +4,20 @@ import {
   css,
   reactjs,
   git,
-  docker,
   csharp,
   python,
   unwordle,
   metro,
   kp9,
   java,
-  threejs,
   vue,
   bootstrap,
   tc,
   remnant,
-  qweb
+  qweb,
+  bash,
+  medsupply,
+  frostfall
 } from '../assets';
 
 export const navLinks = [
@@ -64,8 +65,8 @@ const technologies = [
     icon: git,
   },
   {
-    name: 'docker',
-    icon: docker,
+    name: 'bash',
+    icon: bash,
   },
   {
     name: 'csharp',
@@ -74,10 +75,6 @@ const technologies = [
   {
     name: 'java',
     icon: java
-  },
-  {
-    name: 'threejs',
-    icon: threejs
   },
   {
     name: 'vue',
@@ -130,28 +127,31 @@ const experiences = [
 const projects = [
   {
     id: 'project-1',
+    name: 'Medsupply Ukraine',
+    description: 'Developed a website for Medsupply Ukraine, a club at Queen\'s University.',
+    image: medsupply,
+    repo: 'https://github.com/ryanvandrunen/medsupply-ukraine',
+    demo: 'https://medsupply-ukraine.web.app'
+  },
+  {
+    id: 'project-2',
+    name: 'Frostfall',
+    description: 'A 2D vertical platformer made for a Game Development course with a team of 5.',
+    image: frostfall,
+    repo: 'https://github.com/hjenkins04/CISC226-Game-Development-Project',
+    demo: 'https://hjenkins2004.itch.io/frostfall2d'
+  },
+  {
+    id: 'project-3',
     name: 'Unwordle',
     description: 'Modeled a rendition of the game Wordle using bauhaus, a library for building logical theories with Python.',
-    tags: [
-      {
-        name: 'python',
-        color: 'blue-text-gradient',
-      },
-      {
-        name: 'docker',
-        color: 'green-text-gradient',
-      },
-    ],
     image: unwordle,
     repo: 'https://github.com/ryanvandrunen/Unwordle-SAT-Solver'
   },
   {
-    id: 'project-2',
+    id: 'project-4',
     name: 'Remnant Studios',
     description: 'Created and deployed a website for a friend\'s independent project, using HTML/CSS, JavaScript, and slick for a responsive image carousel.',
-    tags: [
-      
-    ],
     image: remnant,
     repo: 'https://github.com/jctjad/jctjad.github.io',
     demo: 'https://www.remnant-studios.com'
