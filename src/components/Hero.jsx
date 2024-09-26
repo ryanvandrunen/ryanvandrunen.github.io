@@ -1,8 +1,7 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 import { styles } from "../styles";
-import { navLinks } from "../constants";
 import { herobg } from "../assets";
+import resumePDF from "/resume.pdf";
 
 const Hero = () => {
   return (
@@ -12,6 +11,7 @@ const Hero = () => {
           src={herobg}
           alt="hero bg"
           className="w-full h-full sm:block object-cover"
+          id="heroBg"
         />
       </div>
       <section
@@ -82,6 +82,42 @@ const Hero = () => {
                   width="1em"
                 >
                   <path d="M880 112H144c-17.7 0-32 14.3-32 32v736c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V144c0-17.7-14.3-32-32-32zM349.3 793.7H230.6V411.9h118.7v381.8zm-59.3-434a68.8 68.8 0 1 1 68.8-68.8c-.1 38-30.9 68.8-68.8 68.8zm503.7 434H675.1V608c0-44.3-.8-101.2-61.7-101.2-61.7 0-71.2 48.2-71.2 98v188.9H423.7V411.9h113.8v52.2h1.6c15.8-30 54.5-61.7 112.3-61.7 120.2 0 142.3 79.1 142.3 181.9v209.4z"></path>
+                </svg>
+              </button>
+              <button
+                class="flex gap-2 p-1 bg-inherit hover:text-orange-500 text-4xl md:text-5xl"
+                onClick={() => {
+                  const link = document.createElement("a");
+                  link.href = resumePDF;
+                  link.download = "RyanVanDrunen_Resume.pdf";
+                  link.target = "_blank";
+                  document.body.appendChild(link);
+                  link.click();
+                  document.body.removeChild(link);
+                }}
+              >
+                <svg
+                  fill="#000000"
+                  version="1.1"
+                  id="Capa_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="45px"
+                  height="45px"
+                  viewBox="0 0 43.916 43.916"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <path
+                      d="M34.395,0H9.522c-2.762,0-5,2.239-5,5v33.916c0,2.761,2.238,5,5,5h24.871c2.762,0,5-2.239,5-5V5
+		C39.395,2.239,37.154,0,34.395,0z M9.208,16.855c0-1.172,0.951-2.121,2.121-2.121h0.742c-0.791-0.874-1.277-2.03-1.277-3.304
+		c0-2.723,2.209-4.931,4.932-4.931c2.725,0,4.932,2.207,4.932,4.932c0,1.272-0.486,2.429-1.279,3.303h0.709
+		c1.172,0,2.121,0.949,2.121,2.121v3.578c0,1.122-0.875,2.03-1.975,2.106h-9.051c-1.1-0.076-1.975-0.984-1.975-2.106V16.855
+		L9.208,16.855z M32.708,37.416h-21.5c-1.104,0-2-0.896-2-2s0.896-2,2-2h21.5c1.104,0,2,0.896,2,2S33.812,37.416,32.708,37.416z
+		 M32.708,29.916h-21.5c-1.104,0-2-0.896-2-2s0.896-2,2-2h21.5c1.104,0,2,0.896,2,2S33.812,29.916,32.708,29.916z M32.708,22.416
+		h-6.5c-1.104,0-2-0.896-2-2c0-1.104,0.896-2,2-2h6.5c1.104,0,2,0.896,2,2C34.708,21.52,33.812,22.416,32.708,22.416z"
+                    />
+                  </g>
                 </svg>
               </button>
             </div>

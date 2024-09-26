@@ -29,12 +29,39 @@
   src: url('./fonts/overcame-outline.woff');
 }
 
+/* Chrome, Edge and Safari */
+*::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  display: none;
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color: #F59542;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #DE873C;
+}
+
+*::-webkit-scrollbar-thumb:active {
+  background-color: #F59542;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth;
   color-scheme: dark;
+}
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .nav-links::after {
