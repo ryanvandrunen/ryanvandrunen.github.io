@@ -49,7 +49,8 @@ const Tech = () => {
                 <p class="text-white green-text-gradient ">KNIME</p>
                 <p class="text-white green-text-gradient ">LaTeX</p>
                 <p class="text-white green-text-gradient">Firebase</p>
-                <p class="text-white green-text-gradient">Docker</p>
+                <p class="text-white green-text-gradient">Vercel</p>
+                <p class="text-white green-text-gradient">Unity</p>
               </div>
             </div>
           </div>
@@ -59,10 +60,13 @@ const Tech = () => {
                 Libraries
               </h3>
               <div class="flex flex-wrap justify-center gap-2 mt-2 text-center">
+                <p class="text-white green-text-gradient ">Next.js</p>
+                <p class="text-white green-text-gradient ">Vue</p>
                 <p class="text-white green-text-gradient ">THREE.js</p>
-                <p class="text-white green-text-gradient ">jQuery</p>
                 <p class="text-white green-text-gradient ">React</p>
                 <p class="text-white green-text-gradient ">ChakraUI</p>
+                <p class="text-white green-text-gradient ">ChakraUI</p>
+                <p class="text-white green-text-gradient ">TailwindCSS</p>
               </div>
             </div>
           </div>

@@ -17,7 +17,8 @@ import {
   qweb,
   bash,
   medsupply,
-  frostfall
+  frostfall,
+  nhlgamedaygen
 } from '../assets';
 
 export const navLinks = [
@@ -127,6 +128,14 @@ const experiences = [
 const projects = [
   {
     id: 'project-1',
+    name: 'NHL Gameday Generator',
+    description: 'Developed a web application that allows users to generate graphics for NHL games.',
+    image: nhlgamedaygen,
+    repo: 'https://github.com/ryanvandrunen/nhl-gameday-generator',
+    demo: 'https://nhl-gameday-generator.vercel.app'
+  },
+  {
+    id: 'project-2',
     name: 'Medsupply Ukraine',
     description: 'Developed a website for Medsupply Ukraine, a club at Queen\'s University.',
     image: medsupply,
@@ -134,7 +143,7 @@ const projects = [
     demo: 'https://medsupply-ukraine.web.app'
   },
   {
-    id: 'project-2',
+    id: 'project-3',
     name: 'Frostfall',
     description: 'A 2D vertical platformer made for a Game Development course with a team of 5.',
     image: frostfall,
@@ -142,14 +151,14 @@ const projects = [
     demo: 'https://hjenkins2004.itch.io/frostfall2d'
   },
   {
-    id: 'project-3',
+    id: 'project-4',
     name: 'Unwordle',
     description: 'Modeled a rendition of the game Wordle using bauhaus, a library for building logical theories with Python.',
     image: unwordle,
     repo: 'https://github.com/ryanvandrunen/Unwordle-SAT-Solver'
   },
   {
-    id: 'project-4',
+    id: 'project-5',
     name: 'Remnant Studios',
     description: 'Created and deployed a website for a friend\'s independent project, using HTML/CSS, JavaScript, and slick for a responsive image carousel.',
     image: remnant,

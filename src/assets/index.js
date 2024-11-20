@@ -32,6 +32,7 @@ import unwordle from './projects/unwordle.png';
 import remnant from './projects/remnant.png';
 import medsupply from './projects/medsupply.png';
 import frostfall from './projects/frostfall.png';
+import nhlgamedaygen from './projects/nhlgamedaygen.png';
 
 import rvdlogo from './logo/rvd logo.png';
 
@@ -66,5 +67,6 @@ export {
   qweb,
   bash,
   medsupply,
-  frostfall
+  frostfall,
+  nhlgamedaygen
 };
