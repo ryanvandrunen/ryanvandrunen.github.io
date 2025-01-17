@@ -13,7 +13,6 @@ import {
   vue,
   bootstrap,
   tc,
-  remnant,
   qweb,
   bash,
   medsupply,
@@ -165,14 +164,6 @@ const projects = [
     image: unwordle,
     repo: 'https://github.com/ryanvandrunen/Unwordle-SAT-Solver'
   },
-  {
-    id: 'project-6',
-    name: 'Remnant Studios',
-    description: 'Created and deployed a website for a friend\'s independent project, using HTML/CSS, JavaScript, and slick for a responsive image carousel.',
-    image: remnant,
-    repo: 'https://github.com/jctjad/jctjad.github.io',
-    demo: 'https://www.remnant-studios.com'
-  }
 ];
 
 export { technologies, experiences, projects };

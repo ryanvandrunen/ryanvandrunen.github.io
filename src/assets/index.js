@@ -29,7 +29,6 @@ import kp9 from './company/kp9.png'
 import qweb from './company/qweb.png';
 
 import unwordle from './projects/unwordle.png';
-import remnant from './projects/remnant.png';
 import medsupply from './projects/medsupply.png';
 import frostfall from './projects/frostfall.png';
 import nhlgamedaygen from './projects/nhlgamedaygen.png';
@@ -63,7 +62,6 @@ export {
   kp9,
   metro,
   tc,
-  remnant,
   rvdlogo,
   qweb,
   bash,
