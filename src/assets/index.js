@@ -33,6 +33,7 @@ import remnant from './projects/remnant.png';
 import medsupply from './projects/medsupply.png';
 import frostfall from './projects/frostfall.png';
 import nhlgamedaygen from './projects/nhlgamedaygen.png';
+import roam from './projects/roam.png';
 
 import rvdlogo from './logo/rvd logo.png';
 
@@ -68,5 +69,6 @@ export {
   bash,
   medsupply,
   frostfall,
-  nhlgamedaygen
+  nhlgamedaygen,
+  roam
 };
